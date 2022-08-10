@@ -82,5 +82,12 @@ export default class Character implements Fighter {
     this._dexterity += getRandomInt(1, 10);
     this._defense += getRandomInt(1, 10);
     this._energy.amount = 10;
+
+    // console.log(this._maxLifePoints > this._race.maxLifePoints);
+
+    if (this._maxLifePoints > this._race.maxLifePoints) {
+      this._maxLifePoints = this._race.maxLifePoints;
+    }
+    this._lifePoints = this._maxLifePoints;
   }
 }
