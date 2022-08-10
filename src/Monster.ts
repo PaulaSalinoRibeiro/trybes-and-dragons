@@ -1,3 +1,4 @@
+// import Character from './Character';
 import { SimpleFighter } from './Fighter';
 
 export default class Monster implements SimpleFighter {
@@ -22,7 +23,7 @@ export default class Monster implements SimpleFighter {
   }
 
   receiveDamage(attackPoints: number): number {
-    const damage = attackPoints - this._lifePoints;
+    const damage = this._lifePoints - attackPoints;
 
     if (damage > 0) {
       this._lifePoints -= damage;
