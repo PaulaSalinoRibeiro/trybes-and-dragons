@@ -4,6 +4,6 @@ export interface SimpleFighterBase {
 }
 
 export default interface SimpleFighter extends SimpleFighterBase {
-  attack(enemy: SimpleFighterBase): unknown;
+  attack(enemy: SimpleFighter): unknown;
   receiveDamage(attackPoints: number): number;
 }
